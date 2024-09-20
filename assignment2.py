@@ -22,6 +22,7 @@ print("\n\nout-sample accuracy: %s%%\n\n"
 
 
 
+
 model = DecisionTreeClassifier(max_depth=5,min_samples_leaf=10)
 
 y = data_train['meal']
