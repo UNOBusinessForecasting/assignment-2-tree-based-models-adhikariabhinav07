@@ -19,10 +19,6 @@ pred_t = model_t.fit(x_t,y_t)
 print("\n\nout-sample accuracy: %s%%\n\n" 
  % str(round(100*accuracy_score(y_t, model.predict(x_t)), 2)))
 
-
-
-
-
 model = DecisionTreeClassifier(max_depth=5,min_samples_leaf=10)
 
 y = data_train['meal']
@@ -32,10 +28,4 @@ pred = model.fit(x,y)
 print("\n\nIn-sample accuracy: %s%%\n\n" 
  % str(round(100*accuracy_score(y, model.predict(x)), 2)))
 
-
-
-
-
-#y, x = pt.dmatrices("meal ~ -1 + Total", data=data_train)
-#xt, yt = pt.dmatrices("meal ~ -1 + Total", data=data_test)
 
