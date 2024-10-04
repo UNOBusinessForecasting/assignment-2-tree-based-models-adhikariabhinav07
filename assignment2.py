@@ -11,8 +11,8 @@ data_train = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/Ass
 data_test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/AssignmentData/assignment3test.csv")
 
 model_t = DecisionTreeClassifier(max_depth=5,min_samples_leaf=10)
-yt = data_test['meal']
-xt = data_test.drop(['meal','id','DateTime'], axis=1).dropna()
+y_t = data_test['meal']
+x_t = data_test.drop(['meal','id','DateTime'], axis=1).dropna()
 
 x_t, xt, y_t, yt = train_test_split(x_t, y_t, test_size=0.33, random_state=42)
 pred_t = model_t.fit(x_t,y_t)
