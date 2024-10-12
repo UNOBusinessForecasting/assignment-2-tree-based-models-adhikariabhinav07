@@ -12,7 +12,7 @@ y_t = data_train['meal']
 x_t = data_train.drop(['meal','id','DateTime'], axis=1).dropna()
 
 X, xt, Y, yt = train_test_split(x_t, y_t, test_size=0.30, random_state=42)
-model = DecisionTreeClassifier(max_depth=5,min_samples_leaf=10)
+model = DecisionTreeClassifier(max_depth=15,min_samples_leaf=10)
 modelFit = model.fit(X,Y)
 
 print(f"\n\nIn-sample accuracy: {round(100 * accuracy_score(Y, model.predict(X)), 2)}%\n\n")
