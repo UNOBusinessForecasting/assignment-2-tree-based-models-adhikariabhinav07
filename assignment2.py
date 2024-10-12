@@ -23,6 +23,11 @@ data_test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/Assi
 test = data_test.drop(["meal","id","DateTime"],axis = 1)
 pred = model.predict(test)
 
+data_test["pred_meal"] = pred
+print(data_test[["id","pred_meal"]].head())
+
+data_test[["id","pred_meal"]].to_csv("meal_pred.csv",index=False)
+
 
 
 
