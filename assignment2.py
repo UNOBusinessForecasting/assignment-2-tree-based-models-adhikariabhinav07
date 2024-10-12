@@ -21,7 +21,7 @@ print(f"\n\nOut-of-sample accuracy: {round(100 * accuracy_score(yt, model.predic
 data_test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/AssignmentData/assignment3test.csv")
 test = data_test.drop(["meal","id","DateTime"],axis = 1)
 pred = model.predict(test)
-
+np.unique(pred)
 
 
 
