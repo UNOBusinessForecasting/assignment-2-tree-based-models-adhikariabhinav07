@@ -22,7 +22,7 @@ data_test = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/Assi
 test = data_test.drop(["meal","id","DateTime"],axis = 1)
 pred = model.predict(test)
 
-#store predictions
+# store predictions
 
 data_test["what_meal"] = pred
 data_test(["id","what_meal"]).to_csv("where.csv",index = False)
